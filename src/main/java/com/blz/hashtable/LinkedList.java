@@ -23,4 +23,20 @@ public class LinkedList<K> {
         }
         tail = newNode;
     }
+
+    public INode<K> delete(K key) {
+        INode temp=head;
+        if (temp==null){
+            return null;
+        }
+        while (temp.getNext()!=null)
+        {
+            if (temp.getNext().getKey().equals(key)){
+                INode m=temp.getNext().getNext();
+                temp.setNext(m);
+            }
+            temp=temp.getNext();
+        }
+        return  temp;
+    }
 }
