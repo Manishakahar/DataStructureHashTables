@@ -24,19 +24,19 @@ public class LinkedList<K> {
         tail = newNode;
     }
 
-    public INode<K> delete(K key) {
-        INode temp=head;
-        if (temp==null){
+    public INode <K> delete(K key) {
+        INode tempNode=head;
+        if (tempNode==null){
             return null;
         }
-        while (temp.getNext()!=null)
+        while (tempNode.getNext()!=null)
         {
-            if (temp.getNext().getKey().equals(key)){
-                INode m=temp.getNext().getNext();
-                temp.setNext(m);
+            if (tempNode.getNext().getKey().equals(key)){
+                INode value=tempNode.getNext().getNext();
+                tempNode.setNext(value);
             }
-            temp=temp.getNext();
+            tempNode=tempNode.getNext();
         }
-        return  temp;
+        return tempNode;
     }
 }

@@ -40,7 +40,6 @@ public class HashTableTree {
         Integer frequency = (Integer) hashMapParagraph.get("paranoid");
         Integer expectedValue=3;
         Assert.assertEquals(expectedValue, frequency);
-
     }
 
     @Test
