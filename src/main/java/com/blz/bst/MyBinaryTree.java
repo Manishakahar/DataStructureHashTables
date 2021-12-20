@@ -28,7 +28,25 @@ public class MyBinaryTree<K extends Comparable> {
     }
 
     private int getRecursive(MyBinaryNode<K> current) {
-        return current==null ? 0 : 1 + this.getRecursive(current.leftNode) + this.getRecursive(current.rightNode);
+        return  1 + this.getRecursive(current.leftNode) + this.getRecursive(current.rightNode);
+
+    }
+
+    public boolean isPresent(K value) {
+        return search(root,value);
+    }
+
+    private boolean search(MyBinaryNode<K> root, K value) {
+        if (root != null && root.key == value) {
+            return true;
+        }if (root==null){
+            return false;
+        }
+        if (root.key.compareTo(value) < 0) {
+            return search(root.rightNode, value);
+        } else {
+            return search(root.leftNode, value);
+        }
 
     }
 }
