@@ -2,7 +2,8 @@ package com.blz.bst;
 
 public class MyBinaryTree<K extends Comparable> {
 
-private MyBinaryNode<K>root;
+
+    public MyBinaryNode<K>root;
     public void add(K key) {
         this.root = this.addRecursively(root,key);
 

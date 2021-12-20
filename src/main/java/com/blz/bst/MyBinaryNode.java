@@ -10,4 +10,13 @@ public class MyBinaryNode<K> {
         this.leftNode = null;
         this.rightNode = null;
     }
+
+    @Override
+    public String toString() {
+        return "MyBinaryNode{" +
+                "key=" + key +
+                ", leftNode=" + leftNode +
+                ", rightNode=" + rightNode +
+                '}';
+    }
 }
